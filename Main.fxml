@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="427.0" prefWidth="638.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane prefHeight="99.0" prefWidth="638.0" style="-fx-background-color: #ff4f56; -fx-border-color: #f7f8fa;" AnchorPane.bottomAnchor="328.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox fx:id="opsPanel" prefHeight="60.0" prefWidth="638.0" spacing="70.0" style="-fx-border-color: 000000;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Separator prefHeight="0.0" prefWidth="0.0" />
+                  <Button fx:id="btnSearch" mnemonicParsing="false" onAction="#onSearchClicked" prefHeight="35.0" prefWidth="95.0" text="Search" textFill="#252424" textOverrun="CLIP" />
+                  <Button fx:id="btnInsert" mnemonicParsing="false" onAction="#onInsertClicked" prefHeight="35.0" prefWidth="95.0" text="Insert" />
+                  <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#onUpdateClicked" prefHeight="35.0" prefWidth="95.0" text="Update" />
+                  <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#onDeleteClicked" prefHeight="35.0" prefWidth="95.0" text="Delete" />
+                  <Separator prefHeight="8.0" prefWidth="0.0" />
+               </children>
+            </HBox>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="89.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="88.0" AnchorPane.rightAnchor="515.0" AnchorPane.topAnchor="53.0">
+               <image>
+                  <Image url="@../../../../../IdeaProjects/IDbQuery/src/images/sql.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="searchArrow" fitHeight="35.0" fitWidth="35.0" layoutX="24.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.bottomAnchor="293.0" AnchorPane.leftAnchor="209.0" AnchorPane.rightAnchor="394.0" AnchorPane.topAnchor="99.0">
+               <image>
+                  <Image url="@../../../../../IdeaProjects/IDbQuery/src/images/up.png" />
+               </image>
+            </ImageView>
+            <TextField layoutX="148.0" layoutY="59.0" prefHeight="18.0" prefWidth="328.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="148.0" AnchorPane.rightAnchor="148.0" AnchorPane.topAnchor="58.0" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutY="129.0" prefHeight="271.0" prefWidth="608.0" style="-fx-background-color: #ff4f56; -fx-border-color: #f7f8fa;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="129.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <TableView fx:id="tvmovies" layoutX="163.0" layoutY="3.0" prefHeight="286.0" prefWidth="473.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="162.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="2.0">
+              <columns>
+                <TableColumn fx:id="colid" prefWidth="43.0" text="ID" />
+                <TableColumn fx:id="coldesc" prefWidth="102.0" text="Descripción" />
+                  <TableColumn fx:id="colclas" prefWidth="76.0" text="Clasificación" />
+                  <TableColumn fx:id="colsin" prefWidth="74.0" text="Sinopsis" />
+                  <TableColumn fx:id="colact" minWidth="0.0" prefWidth="79.0" text="Actores" />
+                  <TableColumn fx:id="colprod" prefWidth="94.0" text="F. Producción" />
+              </columns>
+            </TableView>
+            <VBox layoutX="8.0" layoutY="6.0" prefHeight="278.0" prefWidth="149.0">
+               <children>
+                  <Label text="ID" />
+                  <TextField fx:id="tfd" />
+                  <Label text="Descripción" />
+                  <TextField fx:id="tfdds" />
+                  <Label text="Clasificación" />
+                  <TextField fx:id="tfClas" />
+                  <Label text="Sinopsis" />
+                  <TextField fx:id="tfSinop" />
+                  <Label text="Actores" />
+                  <TextField fx:id="tfAct" />
+                  <Label text="F. Producción" />
+                  <TextField fx:id="tfProd" />
+               </children>
+            </VBox>
+         </children></AnchorPane>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="209.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.bottomAnchor="293.0" AnchorPane.leftAnchor="209.0" AnchorPane.rightAnchor="394.0" AnchorPane.topAnchor="99.0">
+         <image>
+            <Image url="@../../../../../IdeaProjects/IDbQuery/src/images/up.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="395.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.bottomAnchor="293.0" AnchorPane.leftAnchor="395.0" AnchorPane.rightAnchor="208.0" AnchorPane.topAnchor="99.0">
+         <image>
+            <Image url="@../../../../../IdeaProjects/IDbQuery/src/images/up.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="578.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.bottomAnchor="293.0" AnchorPane.leftAnchor="578.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="99.0">
+         <image>
+            <Image url="@../../../../../IdeaProjects/IDbQuery/src/images/up.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="insertArrow" fitHeight="35.0" fitWidth="35.0" layoutX="25.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.bottomAnchor="293.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="578.0" AnchorPane.topAnchor="99.0">
+         <image>
+            <Image url="@../../../../../IdeaProjects/IDbQuery/src/images/up.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="updateArrow" fitHeight="35.0" fitWidth="35.0" layoutX="395.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.bottomAnchor="293.0" AnchorPane.leftAnchor="395.0" AnchorPane.rightAnchor="208.0" AnchorPane.topAnchor="99.0">
+         <image>
+            <Image url="@../../../../../IdeaProjects/IDbQuery/src/images/up.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="deleteArrow" fitHeight="35.0" fitWidth="35.0" layoutX="578.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.bottomAnchor="293.0" AnchorPane.leftAnchor="578.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="99.0">
+         <image>
+            <Image url="@../../../../../IdeaProjects/IDbQuery/src/images/up.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
